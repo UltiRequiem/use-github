@@ -11,9 +11,9 @@ export interface GitHubPinnedRepo {
 }
 
 /**
- * GitHub Pinned Repositories of an user
- * @param username - The GitHub username to fetch pinned repos for
- * @returns An SWRResponse fulfilled with an array of pinned github repos
+ * Get the GitHub Pinned Repositories of an user
+ * @param username - The GitHub username to fetch
+ * @returns The array of pined repos
  */
 export function useGitHubPinnedRepos(username: string) {
   const resp = useSWR<GitHubPinnedRepo[], Error>(

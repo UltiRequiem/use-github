@@ -1,6 +1,9 @@
 import useSWR from "swr";
 
-export interface User {
+/**
+ * The data of a GitHub User
+ */
+export interface GitHubUser {
   login: string;
   id: number;
   node_id: string;
@@ -36,10 +39,10 @@ export interface User {
 }
 
 /**
- * SWR wrapper that retusn a full github user object from the public api
- * @param username - The github username to fetch data for
- * @returns An SWRREsponse fulfilled with the github user
+ * Get the data of a GitHub User
+ * @param username - The GitHub username to fetch
+ * @returns The GitHub user data
  */
 export function useGitHubUser(username: string) {
-  return useSWR<User, Error>(`https://api.github.com/users/${username}`);
+  return useSWR<GitHubUser, Error>(`https://api.github.com/users/${username}`);
 }

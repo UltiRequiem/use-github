@@ -1,14 +1,22 @@
 {
   "compilerOptions": {
     "target": "ES2018",
-    "lib": ["ES2018"],
+    "lib": ["ES2018", "DOM"],
     "module": "commonjs",
+
     "declaration": true,
+    "sourceMap": true,
+
+    "skipLibCheck": true,
+
     "esModuleInterop": true,
+
     "outDir": "./lib",
-    "strict": true,
-    "baseUrl": "./src"
+
+    "baseUrl": "./src",
+
+    "strict": true
   },
   "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "examples"]
 }
