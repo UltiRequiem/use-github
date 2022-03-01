@@ -2,9 +2,9 @@
 
 ### [View Demo](https://codesandbox.io/s/use-github-example-2231zu)
 
-React Hooks for the [GitHub Rest API](https://docs.github.com/en/rest) :shitpit:
+React Hooks for the [GitHub Rest API](https://docs.github.com/en/rest) :shipit:
 
-It's easy to use and fully typed. It returns an [swr](https://swr.vercel.app) `SWRHook`, but if you don't know what that means, here's an example 👇
+It returns an [`SWRHook`](https://swr.vercel.app), but if you don't know what that means, here's an example 👇
 
 ```tsx
 import { useGitHubUser } from "use-github";

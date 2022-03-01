@@ -1,0 +1,24 @@
+name: Build and Deploy
+
+on: [push]
+
+jobs:
+  build-and-deploy:
+    concurrency: ci-${{ github.ref }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          npm run build:docs
+
+          echo use-github.js.org >> docs/CNAME
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: gh-pages
+          folder: docs
