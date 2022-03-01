@@ -14,5 +14,5 @@ module.exports = {
     "tsdoc/syntax": "warn",
   },
 
-  ignorePatterns: ["*.js", "*.cjs", "node_modules", "docs", "lib"],
+  ignorePatterns: ["*.js", "*.cjs", "node_modules", "docs", "lib", "examples"],
 };
