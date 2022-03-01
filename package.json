@@ -5,6 +5,7 @@
   "files": [
     "lib/**/*"
   ],
+  "description": "React hooks for fetching GitHub data",
   "author": "Eliaz Bobadilla <eliaz.bobadilladev@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -29,6 +30,11 @@
   "dependencies": {
     "swr": "^1.2.2"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ultirequiem/use-github.git"
+  },
+  "homepage": "https://use-github.netlify.app",
   "keywords": [
     "react",
     "github",
