@@ -1,5 +1,7 @@
 import useSWR from "swr";
 
+import { fetcher } from "./utils";
+
 /**
  * The data of a GitHub User
  */
@@ -44,5 +46,8 @@ export interface GitHubUser {
  * @returns The GitHub user data
  */
 export function useGitHubUser(username: string) {
-  return useSWR<GitHubUser, Error>(`https://api.github.com/users/${username}`);
+  return useSWR<GitHubUser, Error>(
+    `https://api.github.com/users/${username}`,
+    fetcher
+  );
 }

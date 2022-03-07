@@ -1,5 +1,7 @@
 import useSWR from "swr";
 
+import { fetcher } from "utils";
+
 export interface GitHubPinnedRepo {
   owner: string;
   repo: string;
@@ -17,7 +19,8 @@ export interface GitHubPinnedRepo {
  */
 export function useGitHubPinnedRepos(username: string) {
   const resp = useSWR<GitHubPinnedRepo[], Error>(
-    `https://gh-pinned-repos.egoist.sh/?username=${username}`
+    `https://gh-pinned-repos.egoist.sh/?username=${username}`,
+    fetcher
   );
 
   return {
