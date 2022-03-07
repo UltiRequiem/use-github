@@ -1,6 +1,6 @@
 import useSWR from "swr";
 
-import { fetcher } from "utils";
+import { fetcher } from "./utils";
 
 export interface GitHubPinnedRepo {
   owner: string;
